@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://harunsins.github.io/zelda-oot-turkce-yama/sitemap.xml
