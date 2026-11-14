@@ -1,17 +1,18 @@
-# Ocarina of Time Türkçe Yama | Kurulum
+# Türkçe Yama | Kurulum
 
-**Yama:** v0.4.3  
-**Hedef oyun sürümü:** 2.0.0  
-**Oyun kimliği:** `0400486024DEC000`  
-**Oyun dili:** American English
+**The Legend of Zelda: Ocarina of Time**
 
-1. **[Türkçe yamayı indir](downloads/Zelda_OOT_Turkce_Yama.zip).**
-2. ZIP dosyasını bir klasöre çıkar.
-3. Oyun kapalıyken emülatörde oyuna sağ tıkla ve mod dizinini aç.
-4. Varsa eski Türkçe yama klasörünü yedekleyip mod dizininden kaldır.
-5. ZIP içerisindeki `TurkceYama` klasörünü mod dizinine kopyala. Yol, `0400486024DEC000/TurkceYama/romfs` yapısında olmalıdır.
-6. Modu etkinleştir, oyun dilini **American English** olarak seç ve oyunu başlat.
+- Türkçe yama: **v1.0** (ilk herkese açık sürüm)
+- Uyumlu oyun sürümü: **2.0.0**
+- Oyun dili: **American English**
 
-**Kaldırmak için:** Oyun kapalıyken `TurkceYama` klasörünü mod dizininden çıkarman yeterlidir.
+1. [**Yamayı indir (ZIP)**](downloads/Zelda_OOT_Turkce_Yama_v1.0.zip).
+2. ZIP arşivinden `TurkceYama` klasörünü çıkar.
+3. Oyun kapalıyken emülatörde oyunun mod dizinini aç.
+4. Eski Türkçe yama varsa yedekleyip mod dizininden kaldır.
+5. `TurkceYama` klasörünü mod dizinine kopyala. Klasör düzeni `0400486024DEC000/TurkceYama/romfs` olmalıdır.
+6. Yama modunu etkinleştir, oyun dilini **American English** olarak ayarla ve oyunu başlat.
 
-**Not:** Yama, Nintendo tarafından hazırlanmış veya onaylanmış değildir. Oyun ve emülatör dahil değildir.
+**Kaldırma:** Oyun kapalıyken `TurkceYama` klasörünü mod dizininden çıkar.
+
+**Not:** Oyun ve emülatör pakete dahil değildir. Bu, Nintendo tarafından hazırlanmış veya onaylanmış bir yama değildir.
