@@ -1,33 +1,32 @@
 # The Legend of Zelda: Ocarina of Time | Türkçe Yama
 
-**Bağımsız hayran çevirisi · HarunSins · v0.4.3**
+The Legend of Zelda: Ocarina of Time için HarunSins tarafından hazırlanan bağımsız Türkçe dil yaması.
 
-The Legend of Zelda: Ocarina of Time için hazırlanmış, oyunun özel isimlerini ve atmosferini korumayı amaçlayan gayriresmî Türkçe dil yaması.
+**[Tanıtım ve indirme sayfası](https://harunsins.github.io/zelda-oot-turkce-yama/)** · **[Yamayı indir (ZIP)](downloads/Zelda_OOT_Turkce_Yama.zip)** · **[Kurulum](KURULUM.md)**
 
-**[Tanıtım sayfası](https://harunsins.github.io/zelda-oot-turkce-yama/)** · **[Kurulum rehberi](KURULUM.md)**
+![The Legend of Zelda: Ocarina of Time](assets/zelda-ocarina-of-time-logo.png)
 
-## Durum ve indirme
+### Sürüm bilgisi
 
-- **Hedef oyun sürümü:** 2.0.0
-- **Oyun kimliği:** `0400486024DEC000`
-- **Seçilmesi gereken oyun dili:** American English
-- **Çeviri:** HarunSins
-- **Paket durumu:** v0.4.3 ZIP dosyası henüz bu GitHub deposuna yüklenmedi. İndirme bağlantısı yüklenmesinden sonra etkinleşecek.
+| | |
+|---|---|
+| Türkçe yama | v0.4.3 |
+| Hedef oyun sürümü | 2.0.0 |
+| Oyun kimliği | `0400486024DEC000` |
+| Seçilecek oyun dili | American English |
 
-Planlanan dosya yolu: `downloads/Zelda_OOT_Turkce_Yama_v0.4.3.zip`
+### Ekran görüntüleri
 
-Orijinal ZIP'in SHA-256 özeti:
+Ekran görüntüleri ve daha fazla bilgi için [tanıtım sayfasına](https://harunsins.github.io/zelda-oot-turkce-yama/) bak.
+
+### Dosya doğrulama
+
+Yüklenen [ZIP dosyasının](downloads/Zelda_OOT_Turkce_Yama.zip) SHA-256 değeri:
 
 ```
 5338918d8d0ebcf1c300c4a8a1c4f3a07540d35849186e78bd1a8731a0a17438
 ```
 
-## Kurulum
+### Not
 
-[**KURULUM.md**](KURULUM.md) dosyasına bak. Oyunun kendisi veya emülatör bu projeye dahil değildir.
-
-## Önemli notlar
-
-Bu yama Nintendo tarafından hazırlanmış ya da onaylanmış değildir. The Legend of Zelda adları ve oyun varlıkları ilgili hak sahiplerine aittir. Yama paketinde değiştirilmiş oyun kaynakları bulunduğundan herkese açık dağıtımı telif hakkı itirazlarına konu olabilir. Oyun içi kapsamlı son test tamamlandı iddiasında bulunulmuyor.
-
-Bu depo, oyun dosyaları için bir lisans veya kullanım hakkı vermez.
+Bu gayriresmî bir hayran çalışmasıdır; Nintendo tarafından onaylanmamıştır. Oyun ve emülatör bu projeye dahil değildir. Paket değiştirilmiş oyun kaynakları içermektedir. Oyun içi tüm olası durumların test edildiği garanti edilmez.
