@@ -2,7 +2,7 @@
 
 **The Legend of Zelda: Ocarina of Time**
 
-- Türkçe yama: **v1.0** (ilk herkese açık sürüm)
+- Türkçe yama: **v1.0**
 - Uyumlu oyun sürümü: **2.0.0**
 - Oyun dili: **American English**
 
