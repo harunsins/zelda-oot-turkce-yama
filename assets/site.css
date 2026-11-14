@@ -61,3 +61,83 @@ dialog{width:min(95vw,1300px);max-width:none;max-height:96vh;overflow:visible;bo
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body,.button,.shot img,.theme-switch button{transition:none}}
 
 @media(hover:none){.music-volume-gear{display:block}}
+
+/* Zelda palette: Hyrule night greens and parchment daylight with royal-blue accents */
+:root{
+  --background:#0b1c20;--surface:#142923;--surface-alt:#1f3935;
+  --bar:#102324;--step:#19342b;--text:#f9f0d9;--muted:#bdceba;
+  --gold:#e2c46b;--accent:#eac87c;--button-text:#163224;
+  --border:#52746b99;--guide-work:#132b29;--caption:#f1e5c9;
+  --hero-veil:linear-gradient(90deg,#0c1e2096 0%,#0e2526a5 39%,#0b2424b5 68%,#092022b8 100%);
+  --hero-fade:#0b1c20;--royal-blue:#75b9dc;--kokiri-green:#a2d48a;
+}
+html[data-theme=light]{
+  --background:#e7e8cf;--surface:#f0eed7;--surface-alt:#d6e4d4;
+  --bar:#e8ead4;--step:#f4efd9;--text:#24483c;--muted:#526d5b;
+  --gold:#976b27;--accent:#d3ad4f;--button-text:#203e33;
+  --border:#6389769e;--guide-work:#d8e2d3;--caption:#294c3d;
+  --hero-veil:linear-gradient(90deg,#e7e6ca30 0%,#e5e6cf64 32%,#e9e8d2b8 68%,#e7e7ccbb 100%);
+  --hero-fade:#e7e8cf;--royal-blue:#246da6;--kokiri-green:#426c39;
+}
+.hero:before{filter:saturate(1.06) contrast(1.04)}
+html[data-theme=light] .hero:before{filter:saturate(1.14) contrast(1.03)}
+html[data-theme=light] .hero-copy{text-shadow:0 1px 12px #f3f1dfce}
+.hero h1{color:var(--text)}
+.navlinks a:hover,.navlinks a[aria-current=page]{color:var(--royal-blue)}
+.quickstart-top a,footer a{color:var(--royal-blue)}
+.button.secondary:hover{border-color:var(--royal-blue)}
+.shot:hover{border-color:var(--kokiri-green)}
+/* Compact external platform icons */
+.social-links{display:flex;align-items:center;gap:5px}
+.social-link{width:33px;height:33px;display:grid;place-items:center;border:1px solid transparent;border-radius:50%;color:var(--text);transition:color .2s,background .2s,border-color .2s}
+.social-link svg{width:19px;height:19px;display:block}
+.social-link:hover{background:var(--surface-alt);border-color:var(--border);color:var(--royal-blue)}
+/* Centered hover-only volume control. Text exists only as accessible labels. */
+.music-widget{isolation:isolate}
+.music-toggle{position:relative;overflow:hidden}
+.music-icon-set{display:grid;place-items:center;transition:opacity .28s ease,transform .28s ease}
+.music-readout{position:absolute;inset:0;display:grid;place-items:center;font:750 12px/1 "Noto Sans",sans-serif;color:var(--text);opacity:0;transform:scale(.84);pointer-events:none;transition:opacity .32s ease,transform .32s ease}
+.music-widget[data-adjusting="true"] .music-icon-set{opacity:0;transform:scale(.8)}
+.music-widget[data-adjusting="true"] .music-readout{opacity:1;transform:scale(1)}
+.music-volume{
+  left:50%;right:auto;top:calc(100% + 7px);
+  width:154px;padding:13px 14px 12px;
+  transform:translate(-50%,-7px);border-radius:11px;
+  box-shadow:0 14px 32px #0006;
+}
+.music-volume:before{content:"";position:absolute;top:-10px;left:0;right:0;width:100%;height:10px}
+.music-widget:hover .music-volume,
+.music-widget:focus-within .music-volume{transform:translate(-50%,0);pointer-events:auto;opacity:1}
+.music-volume input{
+  display:block;width:100%;height:19px;margin:0;
+  cursor:pointer;accent-color:var(--accent);
+  background:transparent;touch-action:none;
+}
+.music-volume input::-webkit-slider-runnable-track{height:5px;border-radius:99px;background:linear-gradient(to right,var(--accent) 0 var(--fill,75%),var(--border) var(--fill,75%) 100%)}
+.music-volume input::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;margin-top:-5px;width:15px;height:15px;border-radius:50%;background:var(--accent);border:2px solid var(--bar);box-shadow:0 1px 4px #0006}
+.music-volume input{appearance:none;-webkit-appearance:none}
+.music-volume input::-moz-range-track{height:5px;border-radius:99px;background:var(--border)}
+.music-volume input::-moz-range-progress{height:5px;border-radius:99px;background:var(--accent)}
+.music-volume input::-moz-range-thumb{width:13px;height:13px;border:2px solid var(--bar);border-radius:50%;background:var(--accent)}
+@media(max-width:800px){
+ .header-actions{gap:10px}.controls{gap:6px}.navlinks{gap:12px}
+ .social-link{width:29px;height:29px}
+}
+@media(max-width:600px){
+ .container{width:min(100% - 24px,1140px)}
+ .header-actions{gap:7px}.controls{gap:4px}
+ .navlinks{gap:10px;font-size:11px}
+ .navlinks a:nth-child(3){display:none}
+ .social-links{gap:0}
+ .social-link{width:27px;height:27px}
+ .social-link svg{width:17px;height:17px}
+ .theme-switch{gap:0;padding:2px}
+ .theme-switch button{width:27px;height:29px}
+ .music-toggle{width:35px;height:35px}
+ .music-volume{left:auto;right:-4px;transform:translateY(-7px)}
+ .music-widget:hover .music-volume,.music-widget:focus-within .music-volume{transform:translateY(0)}
+}
+@media(max-width:390px){
+ .header-symbol{display:none}
+ .navlinks{gap:7px}
+}

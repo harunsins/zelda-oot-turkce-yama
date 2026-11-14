@@ -13,30 +13,58 @@
   const audio=document.querySelector('#page-music');
   const muteButton=document.querySelector('#music-toggle');
   const volume=document.querySelector('#music-volume');
-  const output=document.querySelector('#music-volume-value');
+  const readout=document.querySelector('#music-readout');
   const widget=document.querySelector('.music-widget');
-  const expand=document.querySelector('#volume-expand');
-  if(audio&&muteButton&&volume&&output&&widget){
+  if(audio&&muteButton&&volume&&readout&&widget){
     const get=(key,def)=>{try{return localStorage.getItem(key)??def}catch(_e){return def}};
     const timeGet=()=>{try{return +sessionStorage.getItem('zelda-music-time')||0}catch(_e){return 0}};
     let wanted=get('zelda-music-on','true')!=='false';
     let active=false;
-    let value=Math.min(100,Math.max(0,Number(get('zelda-music-volume','75'))||75));
-    volume.value=value;
-    function updateVolume(){audio.volume=Math.min(1,Number(volume.value)/100*.28);output.textContent=volume.value+'%'}
-    function sync(){muteButton.setAttribute('aria-pressed',String(active));muteButton.setAttribute('aria-label',active?'Müziği kapat':'Müziği aç');muteButton.title=active?'Müziği kapat':'Müziği aç';muteButton.querySelector('[data-icon-on]').hidden=!active;muteButton.querySelector('[data-icon-off]').hidden=active}
+    let raw=Number(get('zelda-music-volume','75'));
+    let value=Number.isFinite(raw)?Math.min(100,Math.max(0,raw)):75;
+    let resetBadgeTimer=null;
+    volume.value=String(Math.round(value));
+    function updateVolume(){
+      const v=Math.round(Number(volume.value));
+      audio.volume=Math.max(0,Math.min(1,v/100*.28));
+      volume.style.setProperty('--fill',v+'%');
+      readout.textContent=v+'%';
+    }
+    function sync(){
+      muteButton.setAttribute('aria-pressed',String(active));
+      muteButton.setAttribute('aria-label',active?'Müziği kapat':'Müziği aç');
+      muteButton.title=active?'Müziği kapat':'Müziği aç';
+      muteButton.querySelector('[data-icon-on]').hidden=!active;
+      muteButton.querySelector('[data-icon-off]').hidden=active;
+    }
+    function showReadout(){
+      if(resetBadgeTimer)clearTimeout(resetBadgeTimer);
+      widget.dataset.adjusting='true';
+    }
+    function hideReadout(delay=500){
+      if(resetBadgeTimer)clearTimeout(resetBadgeTimer);
+      resetBadgeTimer=setTimeout(()=>{widget.dataset.adjusting='false'},delay);
+    }
     const start=async()=>{if(!wanted)return;try{await audio.play();active=!audio.paused}catch(_e){active=false}sync()};
     function stop(){audio.pause();active=false;sync()}
     updateVolume();sync();
-    audio.addEventListener('loadedmetadata',()=>{const t=timeGet();if(t>0&&t<audio.duration-0.5)audio.currentTime=t},{once:true});
-    if(audio.readyState>=1){const t=timeGet();if(t>0&&t<audio.duration-0.5)audio.currentTime=t}
+    audio.addEventListener('loadedmetadata',()=>{const t=timeGet();if(t>0&&t<audio.duration-.5)audio.currentTime=t},{once:true});
+    if(audio.readyState>=1){const t=timeGet();if(t>0&&t<audio.duration-.5)audio.currentTime=t}
     muteButton.addEventListener('click',()=>{
       if(!audio.paused){wanted=false;stop()}else{wanted=true;start()}
       try{localStorage.setItem('zelda-music-on',String(wanted))}catch(_e){}
     });
-    volume.addEventListener('input',()=>{updateVolume();try{localStorage.setItem('zelda-music-volume',volume.value)}catch(_e){}});
-    expand?.addEventListener('click',()=>widget.dataset.volumeOpen=widget.dataset.volumeOpen==='true'?'false':'true');
-    document.addEventListener('pointerdown',e=>{if(widget.dataset.volumeOpen==='true'&&!widget.contains(e.target))widget.dataset.volumeOpen='false'});
+    volume.addEventListener('pointerdown',showReadout);
+    volume.addEventListener('input',()=>{
+      showReadout();updateVolume();
+      try{localStorage.setItem('zelda-music-volume',volume.value)}catch(_e){}
+      hideReadout(900);
+    });
+    volume.addEventListener('pointerup',()=>hideReadout(550));
+    volume.addEventListener('pointercancel',()=>hideReadout(350));
+    volume.addEventListener('keyup',()=>hideReadout(550));
+    volume.addEventListener('blur',()=>hideReadout(350));
+    document.addEventListener('pointerup',()=>{if(widget.dataset.adjusting==='true')hideReadout(550)});
     audio.addEventListener('pause',()=>{active=false;sync()});
     audio.addEventListener('play',()=>{active=true;sync()});
     document.addEventListener('pointerdown',e=>{if(!wanted||!audio.paused||widget.contains(e.target))return;start()},{passive:true});
