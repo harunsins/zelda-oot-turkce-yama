@@ -141,3 +141,26 @@ html[data-theme=light] .hero-copy{text-shadow:0 1px 12px #f3f1dfce}
  .header-symbol{display:none}
  .navlinks{gap:7px}
 }
+
+
+/* Larger user-supplied Zelda icon set */
+.social-links{gap:5px;align-items:center;flex:none}
+.social-link{width:45px;height:45px;flex:0 0 45px;border:1px solid var(--border);border-radius:11px;background:var(--surface);display:grid;place-items:center;overflow:hidden;padding:4px;transition:background .2s,border-color .2s,transform .2s}
+.social-link:hover{background:var(--surface-alt);border-color:var(--gold);transform:translateY(-1px)}
+.social-link .platform-icon{display:block;width:34px;height:34px;max-width:100%;max-height:100%;object-fit:contain}
+.social-link[aria-label="GitHub sayfamız"] .platform-icon{filter:invert(1)}
+html[data-theme="light"] .social-link[aria-label="GitHub sayfamız"] .platform-icon{filter:none}
+.theme-switch{gap:2px}
+.theme-switch button{width:37px;height:37px;overflow:hidden}
+.theme-switch .theme-art{width:29px;height:29px;max-width:100%;max-height:100%;object-fit:contain;pointer-events:none}
+.theme-switch button[aria-pressed="true"]{background:color-mix(in srgb,var(--accent) 25%,var(--surface));box-shadow:inset 0 0 0 1px var(--border)}
+.music-toggle{width:46px;height:46px;overflow:hidden}
+.music-note-art{display:block;width:34px;height:34px;max-width:100%;max-height:100%;object-fit:contain;pointer-events:none}
+.music-toggle[aria-pressed="false"] .music-note-art{opacity:.65;filter:saturate(.75) grayscale(.12)}
+.music-toggle[aria-pressed="true"] .music-note-art{opacity:1;filter:none}
+.music-widget[data-adjusting="true"] .music-icon-set{opacity:0}
+.music-widget[data-adjusting="true"] .music-readout{opacity:1}
+.music-readout{font-size:12px}
+@media(max-width:900px){.header-actions{gap:10px}.controls{gap:7px}.social-link{width:39px;height:39px;flex-basis:39px}.social-link .platform-icon{width:31px;height:31px}}
+@media(max-width:680px){.navlinks{gap:11px}.social-links{gap:2px}.social-link{width:35px;height:35px;flex-basis:35px;padding:2px}.social-link .platform-icon{width:28px;height:28px}.theme-switch button{width:31px;height:31px}.theme-switch .theme-art{width:26px;height:26px}.music-toggle{width:38px;height:38px}.music-note-art{width:29px;height:29px}}
+@media(max-width:480px){.header-actions{gap:5px}.controls{gap:4px}.social-links{gap:1px}.social-link{width:32px;height:32px;flex-basis:32px}.social-link .platform-icon{width:26px;height:26px}}

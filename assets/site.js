@@ -26,16 +26,15 @@
     volume.value=String(Math.round(value));
     function updateVolume(){
       const v=Math.round(Number(volume.value));
-      audio.volume=Math.max(0,Math.min(1,v/100*.28));
+      audio.volume=Math.max(0,Math.min(1,v/100*.65));
       volume.style.setProperty('--fill',v+'%');
       readout.textContent=v+'%';
     }
     function sync(){
+      active=!audio.paused;
       muteButton.setAttribute('aria-pressed',String(active));
       muteButton.setAttribute('aria-label',active?'Müziği kapat':'Müziği aç');
       muteButton.title=active?'Müziği kapat':'Müziği aç';
-      muteButton.querySelector('[data-icon-on]').hidden=!active;
-      muteButton.querySelector('[data-icon-off]').hidden=active;
     }
     function showReadout(){
       if(resetBadgeTimer)clearTimeout(resetBadgeTimer);
@@ -45,7 +44,15 @@
       if(resetBadgeTimer)clearTimeout(resetBadgeTimer);
       resetBadgeTimer=setTimeout(()=>{widget.dataset.adjusting='false'},delay);
     }
-    const start=async()=>{if(!wanted)return;try{await audio.play();active=!audio.paused}catch(_e){active=false}sync()};
+    const start=async()=>{
+      if(!wanted)return;
+      try{
+        audio.muted=false;
+        if(audio.error)audio.load();
+        await audio.play();
+      }catch(_e){active=false}
+      sync();
+    };
     function stop(){audio.pause();active=false;sync()}
     updateVolume();sync();
     audio.addEventListener('loadedmetadata',()=>{const t=timeGet();if(t>0&&t<audio.duration-.5)audio.currentTime=t},{once:true});
