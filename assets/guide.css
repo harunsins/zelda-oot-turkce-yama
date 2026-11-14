@@ -1,0 +1,63 @@
+.guide-intro{padding:46px 0 26px;text-align:center}.guide-intro .eyebrow{justify-content:center}.guide-intro h1{font:600 clamp(30px,4vw,49px)/1.17 'Cinzel','Noto Serif',serif;letter-spacing:-.02em;margin:10px 0 8px}.guide-intro p{margin:0 auto;max-width:730px;color:var(--muted);font-size:14px}
+.guide-card{border:1px solid var(--border);border-radius:13px;overflow:hidden;background:var(--surface);box-shadow:0 18px 60px #0002}
+.guide-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:14px 20px;gap:12px;border-bottom:1px solid var(--border)}
+.guide-top strong{font-size:14px}.guide-top .tip{font-size:12px;color:var(--muted)}
+.guide-display{background:var(--guide-work);padding:20px;position:relative}
+.demo-desktop{position:relative;width:100%;height:clamp(310px,40vw,450px);overflow:hidden;border:1px solid var(--border);border-radius:10px;background:linear-gradient(0deg,#142116cc,#17211666),url('09-oyun-ici.webp') center/cover}
+html[data-theme=light] .demo-desktop{background:linear-gradient(0deg,#dbcdb79c,#bdb7a260),url('09-oyun-ici.webp') center/cover}
+.demo-desktop:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#050e0920,#09110950);pointer-events:none}
+.sim-window{position:absolute;inset:8% 10%;border:1px solid #b2a27f68;border-radius:8px;background:#121b17e6;color:#f8f5e8;box-shadow:0 14px 45px #0008;overflow:hidden;transition:opacity .4s,transform .4s}
+.sim-bar{height:34px;background:#18231c;display:flex;align-items:center;justify-content:space-between;padding:0 14px;border-bottom:1px solid #ffffff22;font-size:12px;gap:10px}
+.sim-dots{display:flex;gap:5px}.sim-dots i{display:block;width:8px;height:8px;background:#d9c99487;border-radius:50%}
+.sim-game{position:absolute;inset:34px 0 0;display:flex;align-items:center;justify-content:center;gap:23px;padding:15px}
+.sim-game .game-card{position:relative;display:flex;align-items:center;justify-content:center;width:min(52%,360px);height:82%;border:2px solid #e8d19880;border-radius:5px;background:linear-gradient(#06120a44,#0a130ba0),url('01-ana-menu.webp') center/cover;box-shadow:0 4px 18px #0008}
+.sim-game .game-card img{max-width:78%;max-height:65%;object-fit:contain;filter:drop-shadow(0 3px 9px #000a)}
+.sim-game .game-title{font-size:14px;color:#f8f4e5;font-weight:700}
+.context-menu{position:absolute;z-index:6;left:46%;top:38%;width:235px;background:#19211c;color:#eceada;border:1px solid #bbab856e;border-radius:6px;padding:6px;box-shadow:0 12px 30px #000a;opacity:0;transform:translateY(-7px) scale(.98);pointer-events:none;transition:opacity .35s,transform .35s}
+.context-menu .line{display:block;padding:10px 11px;font-size:12px;border-radius:4px}.context-menu .selected{background:#d2af6c;color:#151a13;font-weight:800}
+.sim-file-explorer,.sim-config{position:absolute;z-index:7;inset:9% 7%;border:1px solid #c6b58b99;border-radius:7px;background:#f0e9d7;color:#293129;box-shadow:0 16px 45px #000a;opacity:0;transform:translateY(25px) scale(.97);pointer-events:none;transition:opacity .45s,transform .45s}
+.explorer-head,.config-head{height:42px;display:flex;align-items:center;gap:9px;padding:0 16px;background:#d8caaa;border-bottom:1px solid #a8997c;font-size:12px;font-weight:800}
+.explorer-head .crumb{padding:4px 8px;background:#fbf7ee;border:1px solid #ae9e81;border-radius:4px;font-weight:600;font-size:11px}
+.explorer-body{display:grid;grid-template-columns:1fr 1fr;gap:13px;padding:22px;height:calc(100% - 42px)}
+.explorer-side{border:1px solid #b7a98d;background:#fffcf5;border-radius:5px;padding:18px;display:flex;align-items:center;justify-content:flex-start;flex-direction:column;gap:12px;text-align:center}
+.explorer-side strong{font-size:13px;max-width:100%;overflow-wrap:anywhere}.explorer-side small{font-size:11px;color:#687368}
+.file-icon{width:49px;height:41px;border-radius:3px;background:#d5aa52;clip-path:polygon(0 15%,35% 15%,45% 0,92% 0,100% 15%,100% 100%,0 100%);box-shadow:inset 0 4px 0 #e6c07a}
+.file-icon.zipped{background:#ba9a67;position:relative}.file-icon.zipped:after{content:"ZIP";position:absolute;top:17px;left:0;width:100%;font-size:10px;font-weight:900;color:#fff}
+.drag-file{--drag-dist:310px;position:absolute;z-index:9;left:24%;top:48%;display:flex;align-items:center;gap:7px;background:#f4edda;color:#223324;border:1px solid #b3975e;border-radius:6px;padding:7px 12px;box-shadow:0 9px 20px #0007;font-weight:750;font-size:12px;opacity:0;pointer-events:none}
+.drag-file .file-icon{width:22px;height:20px}
+.copy-success{position:absolute;z-index:8;right:11%;bottom:16%;color:#225f38;font-size:14px;font-weight:800;opacity:0}
+.config-main{padding:17px 24px}.config-tabs{display:flex;gap:10px;border-bottom:1px solid #c1b498;padding-bottom:10px;font-size:12px;color:#516052}
+.config-tabs .current{color:#29412d;font-weight:850;border-bottom:2px solid #a0782b}.config-row{margin:17px auto;border:1px solid #c1ad84;border-radius:7px;background:#fffaf0;padding:15px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:510px}
+.config-row strong{font-size:14px}.config-row small{display:block;color:#667160;font-size:11px}
+.fake-check{display:grid;place-items:center;width:26px;height:26px;border:2px solid #8b805e;border-radius:5px;font-size:18px;color:white;font-weight:900;transition:background .2s;border-color:#75875c}
+.config-row.checked .fake-check{background:#398349;border-color:#398349}.fake-check:after{content:""}.config-row.checked .fake-check:after{content:"✓"}
+.config-actions{display:flex;justify-content:flex-end;padding:0 24px;gap:9px}.config-actions span{background:#caab67;color:#212619;font-weight:800;font-size:12px;padding:8px 18px;border-radius:4px}
+.success-scene{position:absolute;z-index:12;inset:0;background:linear-gradient(#102117ed,#101c15f3);display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;gap:12px;opacity:0;transform:scale(.94);pointer-events:none;transition:opacity .5s,transform .5s;color:#f8f1e1}
+.success-scene svg{width:68px;height:68px;stroke:#b4e2b0;stroke-width:2.5;fill:none}.success-scene h2{font:600 32px 'Cinzel','Noto Serif',serif;margin:0}.success-scene p{font-size:14px;max-width:480px;margin:0;padding:0 15px}
+.guide-pointer{position:absolute;z-index:25;left:53%;top:58%;width:24px;height:31px;filter:drop-shadow(1px 2px 3px #000b);transition:left 2s ease,top 2s ease,opacity .35s}
+.guide-pointer svg{width:100%;height:100%}.tap-ring{position:absolute;border-radius:100%;border:2px solid #f7e0a2;width:35px;height:35px;left:53%;top:58%;opacity:0;pointer-events:none}
+.demo-desktop[data-stage="0"] .guide-pointer{left:42%;top:48%}
+.demo-desktop[data-stage="1"] .guide-pointer{left:56%;top:56%}
+.demo-desktop[data-stage="1"] .context-menu{opacity:1;transform:none}
+.demo-desktop[data-stage="2"] .sim-file-explorer{opacity:1;transform:none}
+.demo-desktop[data-stage="2"] .guide-pointer{left:76%;top:63%}
+.demo-desktop[data-stage="2"] .drag-file{opacity:1;animation:folder-drag 4.1s ease-in-out infinite}
+.demo-desktop[data-stage="2"] .copy-success{animation:copy-msg 4.1s ease-in-out infinite}
+.demo-desktop[data-stage="3"] .sim-config{opacity:1;transform:none}
+.demo-desktop[data-stage="3"] .guide-pointer{left:60%;top:57%}
+.demo-desktop[data-stage="4"] .success-scene{opacity:1;transform:scale(1)}
+.demo-desktop[data-stage="4"] .guide-pointer{opacity:0}
+@keyframes folder-drag{0%,14%{transform:translate(0,0)}48%,68%{transform:translate(var(--drag-dist),4px)}100%{transform:translate(var(--drag-dist),4px);opacity:0}}
+@keyframes copy-msg{0%,65%{opacity:0}73%,95%{opacity:1}100%{opacity:0}}
+.guide-status{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:20px;border-top:1px solid var(--border)}
+.guide-explain h3{font-size:17px;margin:0 0 4px}.guide-explain p{margin:0;color:var(--muted);font-size:13px;max-width:610px}
+.guide-playback{display:flex;align-items:center;gap:8px}.guide-playback button{display:grid;place-items:center;border:1px solid var(--border);border-radius:6px;background:var(--surface-alt);color:var(--text);height:38px;min-width:39px;cursor:pointer}.guide-playback button:hover{border-color:var(--gold);color:var(--gold)}
+.guide-chapters{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;padding:0 20px 18px}
+.guide-chapters button{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;min-height:43px;padding:8px;border:1px solid var(--border);border-radius:5px;background:var(--step);color:var(--muted);font-size:11px;font-weight:700;cursor:pointer}
+.guide-chapters button strong{display:grid;place-items:center;border:1px solid currentColor;border-radius:50%;width:21px;height:21px;font-size:11px}
+.guide-chapters button[aria-current=step]{color:var(--accent);border-color:var(--gold);background:var(--surface-alt)}
+.guide-extra{display:flex;align-items:flex-start;gap:18px;flex-wrap:wrap;justify-content:space-between;padding:25px 0 55px}.guide-extra p{font-size:13px;color:var(--muted);max-width:690px;margin:0}
+.guide-extra .button{white-space:nowrap}
+@media(max-width:850px){.guide-chapters{grid-template-columns:repeat(3,1fr)}.context-menu{width:210px}.guide-display{padding:13px}.explorer-body{padding:10px}.sim-game{gap:10px}.sim-game .game-title{font-size:12px}.explorer-side{padding:10px}}
+@media(max-width:600px){.guide-intro{padding:29px 0 18px}.guide-intro p{font-size:12px}.guide-display{padding:8px}.demo-desktop{height:340px}.sim-window{inset:7% 4%}.sim-game .game-card{width:73%}.sim-game .game-title{display:none}.context-menu{left:30%;top:45%;width:188px}.context-menu .line{padding:9px;font-size:11px}.sim-file-explorer,.sim-config{inset:5% 3%}.explorer-body{gap:6px;padding:8px}.explorer-side{padding:8px;gap:7px}.explorer-side strong{font-size:10px}.explorer-side small{font-size:9px}.file-icon{width:37px;height:32px}.drag-file{--drag-dist:120px;left:12%;top:48%;font-size:10px}.config-main{padding:8px}.config-head{font-size:11px}.config-tabs{font-size:10px}.config-row{padding:12px}.config-row strong{font-size:12px}.config-row small{font-size:10px}.guide-status{padding:13px}.guide-playback{width:100%;justify-content:center}.guide-explain h3{font-size:15px}.guide-chapters{padding:0 12px 13px;grid-template-columns:repeat(2,1fr)}.guide-chapters button{font-size:10px}.guide-extra{padding:22px 0 40px}.success-scene h2{font-size:25px}}
+@media(prefers-reduced-motion:reduce){.sim-file-explorer,.sim-config,.guide-pointer,.success-scene,.drag-file,.copy-success{transition:none!important;animation:none!important}}

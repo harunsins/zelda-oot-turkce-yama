@@ -1,190 +1,57 @@
-<!doctype html>
-<html lang="tr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#101b15">
-  <meta name="description" content="The Legend of Zelda: Ocarina of Time Türkçe yama v1.0. Yama dosyasını indir, kurulumu öğren ve oyun içi ekran görüntülerini incele.">
-  <meta property="og:title" content="Ocarina of Time Türkçe Yama | HarunSins">
-  <meta property="og:description" content="The Legend of Zelda: Ocarina of Time için Türkçe dil yaması. İndir, kur ve oyun içi görselleri incele.">
-  <meta property="og:image" content="https://harunsins.github.io/zelda-oot-turkce-yama/assets/01-ana-menu.webp">
-  <title>Ocarina of Time Türkçe Yama | HarunSins</title>
+<!doctype html><html lang="tr"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101b15"><meta name="robots" content="index,follow,max-image-preview:large">
+  <title>Zelda Ocarina of Time Türkçe Yama v1.0 | İndir ve Kurulum</title><meta name="description" content="The Legend of Zelda: Ocarina of Time (Switch 2) Türkçe yama v1.0. Ücretsiz indirme, animasyonlu kurulum rehberi ve Türkçe oyun görüntüleri.">
+  <link rel="canonical" href="https://harunsins.github.io/zelda-oot-turkce-yama/">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script>try{const t=localStorage.getItem('zelda-oot-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;else if(matchMedia('(prefers-color-scheme: light)').matches)document.documentElement.dataset.theme='light';}catch(e){}</script>
-  <style>
-
-:root{color-scheme:dark;--background:#0c1813;--surface:#15241c;--surface-alt:#1d2e22;--text:#f5f0e2;--muted:#b9c2b3;--gold:#dec17e;--accent:#e6c582;--button-text:#192218;--border:#59654c80;--bar:#101b15;--step:#1c2b21;--hero-veil:linear-gradient(90deg,#0c1813f5 0%,#0c1813e0 32%,#11251ac2 62%,#0c1813e8 100%);--hero-fade:#0c1813;--caption:#e9e5d6}
-html[data-theme="light"]{color-scheme:light;--background:#efe6d3;--surface:#f7f0e1;--surface-alt:#e7dcc5;--text:#29382e;--muted:#596354;--gold:#9a702b;--accent:#b98637;--button-text:#ffffff;--border:#9f92755e;--bar:#f8f0df;--step:#f8f2e5;--hero-veil:linear-gradient(90deg,#efe7d6ee 0%,#e9e2d1d8 34%,#ede3d3ca 65%,#efe7d6ed 100%);--hero-fade:#efe6d3;--caption:#303b30}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:75px}
-body{margin:0;background:var(--background);color:var(--text);font-family:"Noto Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.58;overflow-x:hidden;transition:background-color .22s,color .22s}
-a{color:inherit;text-decoration:none}
-a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-button{font:inherit}
-.container{width:min(1140px,calc(100% - 44px));margin-inline:auto}
-.topbar{position:relative;z-index:5;background:var(--bar);border-bottom:1px solid var(--border)}
-.topbar .container{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:15px}
-.header-symbol{display:flex;align-items:center;justify-content:center;width:34px;height:34px;color:var(--gold);flex:none;user-select:none;pointer-events:none}
-.header-symbol svg{width:28px;height:28px;fill:currentColor}
-.header-actions{display:flex;align-items:center;justify-content:flex-end;gap:23px;min-width:0}
-.navlinks{display:flex;align-items:center;gap:24px;font-size:13px;font-weight:700}
-.navlinks a:hover{color:var(--gold)}
-.theme-switch{display:flex;align-items:center;gap:3px;border:1px solid var(--border);background:var(--surface);padding:3px;border-radius:30px;flex:none}
-.theme-switch button{display:grid;place-items:center;width:35px;height:35px;border:0;border-radius:50%;color:var(--muted);background:transparent;cursor:pointer;transition:background-color .18s,color .18s}
-.theme-switch button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.theme-switch button[aria-pressed="true"]{background:var(--accent);color:var(--button-text)}
-.theme-switch button:not([aria-pressed="true"]):hover{background:var(--surface-alt);color:var(--text)}
-.hero{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--border)}
-.hero::before{content:"";position:absolute;inset:0;z-index:-2;background-image:var(--hero-veil),url("assets/09-oyun-ici.webp");background-position:center,center 45%;background-size:cover;filter:saturate(.85)}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,var(--hero-fade),transparent 22%);pointer-events:none}
-.hero .container{min-height:395px;padding:38px 0 42px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:44px}
-.hero-logo{display:flex;align-items:center;justify-content:center;min-width:0}
-.hero-logo img{display:block;width:min(100%,440px);height:auto;max-height:310px;object-fit:contain;filter:drop-shadow(0 12px 18px #0006)}
-.eyebrow{display:inline-flex;align-items:center;gap:11px;font-family:"Cinzel","Noto Serif",Georgia,serif;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--gold);text-transform:uppercase}
-.eyebrow::before{content:"";width:23px;height:1px;background:var(--gold)}
-.hero h1{font:600 clamp(43px,4.8vw,69px)/1.14 "Cinzel","Noto Serif",Georgia,serif;letter-spacing:-.03em;margin:11px 0 16px}
-.hero h1 span{color:var(--gold)}
-.hero p{font-size:15px;color:var(--text);margin:0 0 23px;max-width:490px}
-.buttons{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
-.button{display:inline-flex;gap:10px;align-items:center;justify-content:center;min-height:47px;padding:10px 20px;border:1px solid var(--accent);border-radius:5px;background:var(--accent);color:var(--button-text);font-size:14px;font-weight:800;transition:filter .2s,transform .2s}
-.button:hover{filter:brightness(1.08);transform:translateY(-2px)}
-.button.secondary{background:var(--surface);color:var(--text);border-color:var(--border)}
-.button.secondary:hover{background:var(--surface-alt)}
-.metadata{display:flex;flex-wrap:wrap;gap:15px;margin:18px 0 0;font-size:12px;color:var(--muted)}
-.metadata strong{font-weight:800;color:var(--text)}
-.quickstart{background:var(--surface);border-bottom:1px solid var(--border)}
-.quickstart .container{padding:24px 0 28px}
-.quickstart-top{display:flex;justify-content:space-between;align-items:baseline;gap:15px;margin-bottom:16px}
-.quickstart h2{font:600 21px "Cinzel","Noto Serif",serif;margin:0}
-.quickstart-top a{font-size:12px;font-weight:700;color:var(--gold);text-decoration:underline;text-underline-offset:4px}
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.steps li{display:flex;align-items:center;gap:12px;padding:15px 13px;border:1px solid var(--border);background:var(--step);border-radius:5px;min-width:0;min-height:78px}
-.steps .number{display:flex;align-items:center;justify-content:center;flex:0 0 32px;width:32px;height:32px;border:1px solid var(--gold);color:var(--gold);font:700 16px/1 "Cinzel",Georgia,serif;border-radius:50%;margin:0;min-width:32px}
-.steps .steptext{display:block;flex:1;min-width:0;overflow-wrap:break-word;font-size:13px;line-height:1.45;font-weight:700;color:var(--text)}
-.steps small{display:block;font-size:11px;line-height:1.4;color:var(--muted);font-weight:400;margin-top:3px}
-.gallery-section{padding:51px 0 66px}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:23px}
-.section-head h2{font:600 clamp(29px,3.5vw,42px)/1.16 "Cinzel","Noto Serif",Georgia,serif;letter-spacing:-.015em;margin:9px 0 0}
-.section-head p{font-size:13px;color:var(--muted);margin:0 0 4px}
-.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.shot{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:6px;overflow:hidden}
-.shot a{display:block;position:relative;overflow:hidden;background:#0a100b;aspect-ratio:16/9;cursor:zoom-in}
-.shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .35s ease}
-.shot a:hover img{transform:scale(1.025)}
-.shot figcaption{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 14px 12px;color:var(--caption);font-size:13px;font-weight:700}
-.shot figcaption .index{color:var(--gold);font:600 12px "Cinzel",serif}
-.shot:last-child{grid-column:1/-1}
-.shot:last-child a{aspect-ratio:2.2/1}
-footer{border-top:1px solid var(--border);background:var(--surface);padding:20px 0;color:var(--muted)}
-footer .container{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12px}
-footer a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
-dialog{width:min(95vw,1300px);max-width:none;max-height:96vh;overflow:visible;border:1px solid #b89b62;background:#0b0e0b;padding:13px 13px 8px;color:#fff;border-radius:8px;box-shadow:0 30px 110px #000b}
-dialog::backdrop{background:#020502e8;backdrop-filter:blur(7px)}
-dialog img{display:block;max-width:100%;width:100%;height:auto;max-height:78vh;object-fit:contain}
-.lightbox-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:8px;color:#f1e8d7;font-size:13px}
-.lightbox-controls button{cursor:pointer;color:inherit;background:#24271d;border:1px solid #77715a;border-radius:4px;min-height:35px;padding:5px 12px}
-.lightbox-controls button:hover{background:#424333}
-@media(max-width:950px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.hero .container{gap:19px}.hero-logo img{max-height:270px}}
-@media(max-width:640px){.container{width:min(100% - 28px,1140px)}.topbar .container{min-height:59px}.header-actions{gap:11px}.navlinks{gap:13px;font-size:12px}.theme-switch button{width:31px;height:31px}.theme-switch button svg{width:18px;height:18px}.hero .container{grid-template-columns:1fr;min-height:0;gap:9px;text-align:center;padding:25px 0 32px}.hero-logo img{width:min(65vw,290px);max-height:220px}.hero h1{font-size:clamp(35px,9vw,48px);margin-top:8px}.hero p{margin:0 auto 20px;font-size:14px}.eyebrow{justify-content:center}.buttons{justify-content:center}.button{flex:1;min-width:140px}.metadata{justify-content:center;gap:9px 15px}.quickstart .container{padding:21px 0}.section-head{align-items:start;flex-direction:column;gap:8px}.gallery{grid-template-columns:1fr;gap:13px}.shot:last-child{grid-column:auto}.shot:last-child a{aspect-ratio:16/9}.gallery-section{padding:39px 0}}
-@media(max-width:480px){.header-symbol{width:20px}.header-symbol svg{width:20px}.navlinks{gap:10px;font-size:11px}.navlinks a:last-child{display:none}.theme-switch button{width:30px;height:30px}.steps{grid-template-columns:1fr}.steps li{padding:12px 14px;min-height:66px}.steps .number{flex-basis:30px;width:30px;height:30px;min-width:30px}.quickstart-top a{font-size:11px}.hero-logo img{width:min(72vw,265px)}.button{min-width:130px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body,.button,.shot img,.theme-switch button{transition:none}}
-
-</style>
-</head>
-<body>
-  <header class="topbar">
-    <nav class="container" aria-label="Ana gezinme">
-      <span class="header-symbol" aria-hidden="true"><svg viewBox="0 0 48 45" xmlns="http://www.w3.org/2000/svg"><path d="M24 2 35 22H13Z M12 23 23 43H1Z M36 23 47 43H25Z"/></svg></span>
-      <div class="header-actions">
-        <div class="navlinks"><a href="#kurulum">Kurulum</a><a href="#goruntuler">Görseller</a><a href="https://github.com/harunsins/zelda-oot-turkce-yama" target="_blank" rel="noopener noreferrer">GitHub</a></div>
-        <div class="theme-switch" role="group" aria-label="Görünüm teması">
-          <button type="button" data-theme-choice="light" aria-label="Açık tema" title="Açık tema" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button>
-          <button type="button" data-theme-choice="dark" aria-label="Koyu tema" title="Koyu tema" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.1 15.9A8.5 8.5 0 0 1 8.1 3.9 8.5 8.5 0 1 0 20.1 15.9Z"></path></svg></button>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section id="baslangic" class="hero" aria-labelledby="yama-baslik">
-      <div class="container">
-        <div class="hero-logo"><img src="assets/zelda-ocarina-of-time-logo.png" alt="The Legend of Zelda: Ocarina of Time orijinal logosu" width="1000" height="739" fetchpriority="high"></div>
-        <div class="hero-copy">
-          <span class="eyebrow">Ocarina of Time</span>
-          <h1 id="yama-baslik">Türkçe <span>Yama</span></h1>
-          <p>Ocarina of Time için hazırlanmış Türkçe dil yaması. Menüler, eşya açıklamaları ve diyaloglar Türkçe.</p>
-          <div class="buttons">
-            <a class="button" href="downloads/Zelda_OOT_Turkce_Yama_v1.0.zip" download aria-label="Zelda Ocarina of Time Türkçe Yamayı ZIP olarak indir"><span aria-hidden="true">↓</span> Yamayı İndir</a>
-            <a class="button secondary" href="#kurulum">Nasıl Kurulur?</a>
-          </div>
-          <div class="metadata"><span>Sürüm <strong>v1.0</strong></span><span>Oyun <strong>2.0.0</strong></span><span>Dil <strong>American English</strong></span></div>
-        </div>
-      </div>
-    </section>
-    <section class="quickstart" id="kurulum" aria-labelledby="kurulum-baslik">
-      <div class="container">
-        <div class="quickstart-top"><h2 id="kurulum-baslik">Kurulum</h2><a href="KURULUM.md">Ayrıntılı rehber</a></div>
-        <ol class="steps">
-          <li><span class="number">1</span><span class="steptext">Yamayı indir<small>ZIP dosyasını al</small></span></li>
-          <li><span class="number">2</span><span class="steptext">Arşivi çıkart<small>TurkceYama klasörü</small></span></li>
-          <li><span class="number">3</span><span class="steptext">Mod dizinine kopyala<small>Mevcut yamayı yedekle</small></span></li>
-          <li><span class="number">4</span><span class="steptext">Dili seç ve başlat<small>American English</small></span></li>
-        </ol>
-      </div>
-    </section>
-    <section class="gallery-section" id="goruntuler" aria-labelledby="gallery-title">
-      <div class="container">
-        <div class="section-head"><div><span class="eyebrow">Oyundan görüntüler</span><h2 id="gallery-title">Ekran Görüntüleri</h2></div><p>Görseli büyütmek için tıkla.</p></div>
-        <div class="gallery">
-          <figure class="shot"><a href="assets/01-ana-menu.webp" data-shot data-caption="Ana menü"><img src="assets/01-ana-menu.webp" alt="Ocarina of Time Türkçe ana menü" loading="lazy" width="1600" height="900"></a><figcaption><span>Ana Menü</span><span class="index">01</span></figcaption></figure>
-          <figure class="shot"><a href="assets/02-ayarlar.webp" data-shot data-caption="Ayarlar"><img src="assets/02-ayarlar.webp" alt="Türkçeleştirilmiş oyun ayarları" loading="lazy" width="1600" height="896"></a><figcaption><span>Ayarlar</span><span class="index">02</span></figcaption></figure>
-          <figure class="shot"><a href="assets/03-kontroller.webp" data-shot data-caption="Kontroller"><img src="assets/03-kontroller.webp" alt="Türkçe kontrol açıklamaları" loading="lazy" width="1600" height="898"></a><figcaption><span>Kontroller</span><span class="index">03</span></figcaption></figure>
-          <figure class="shot"><a href="assets/04-ekipman.webp" data-shot data-caption="Ekipman"><img src="assets/04-ekipman.webp" alt="Kokiri Kılıcı ekipman menüsü" loading="lazy" width="1600" height="896"></a><figcaption><span>Ekipman</span><span class="index">04</span></figcaption></figure>
-          <figure class="shot"><a href="assets/05-esyalar.webp" data-shot data-caption="Eşyalar"><img src="assets/05-esyalar.webp" alt="Peri Sapanı eşya açıklaması" loading="lazy" width="1600" height="895"></a><figcaption><span>Eşyalar</span><span class="index">05</span></figcaption></figure>
-          <figure class="shot"><a href="assets/06-hizli-esya-secimi.webp" data-shot data-caption="Hızlı eşya seçimi"><img src="assets/06-hizli-esya-secimi.webp" alt="Türkçe hızlı eşya seçim ekranı" loading="lazy" width="1599" height="900"></a><figcaption><span>Hızlı Eşya Seçimi</span><span class="index">06</span></figcaption></figure>
-          <figure class="shot"><a href="assets/07-dukkan.webp" data-shot data-caption="Dükkân"><img src="assets/07-dukkan.webp" alt="Türkçe ürün açıklamalı oyun dükkânı" loading="lazy" width="1599" height="900"></a><figcaption><span>Dükkân</span><span class="index">07</span></figcaption></figure>
-          <figure class="shot"><a href="assets/08-harita.webp" data-shot data-caption="Harita"><img src="assets/08-harita.webp" alt="Kokiri Ormanı Türkçe harita ekranı" loading="lazy" width="1600" height="900"></a><figcaption><span>Harita</span><span class="index">08</span></figcaption></figure>
-          <figure class="shot"><a href="assets/09-oyun-ici.webp" data-shot data-caption="Oyun içi görünüm"><img src="assets/09-oyun-ici.webp" alt="Türkçe oyun içi sahne" loading="lazy" width="1600" height="896"></a><figcaption><span>Oyun İçi Görünüm</span><span class="index">09</span></figcaption></figure>
-          <figure class="shot"><a href="assets/10-npc-etkilesimi.webp" data-shot data-caption="NPC etkileşimi"><img src="assets/10-npc-etkilesimi.webp" alt="NPC ile etkileşim ve konuşma seçeneği" loading="lazy" width="1600" height="896"></a><figcaption><span>NPC Etkileşimi</span><span class="index">10</span></figcaption></figure>
-          <figure class="shot"><a href="assets/11-npc-konusmasi.webp" data-shot data-caption="NPC konuşması"><img src="assets/11-npc-konusmasi.webp" alt="Türkçeleştirilmiş NPC konuşması" loading="lazy" width="1600" height="891"></a><figcaption><span>NPC Konuşması</span><span class="index">11</span></figcaption></figure>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer><div class="container"><span>HarunSins · Türkçe Yama v1.0</span><span>Resmî Nintendo ürünü değildir. Tam oyun veya emülatör içermez. <a href="https://github.com/harunsins/zelda-oot-turkce-yama">GitHub</a></span></div></footer>
-  <dialog id="lightbox" aria-label="Ekran görüntüsü önizlemesi"><img id="lightbox-img" alt="" width="1600" height="900"><div class="lightbox-controls"><span id="lightbox-caption"></span><div><button type="button" id="prev-shot" aria-label="Önceki görsel">‹</button> <button type="button" id="next-shot" aria-label="Sonraki görsel">›</button> <button type="button" id="close-shot" aria-label="Kapat">Kapat</button></div></div></dialog>
-  <script>
-    (() => {
-      const toggles=[...document.querySelectorAll('[data-theme-choice]')];
-      function setTheme(theme){
-        const chosen=theme==='light'?'light':'dark';
-        document.documentElement.dataset.theme=chosen;
-        toggles.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.themeChoice===chosen)));
-        document.querySelector('meta[name="theme-color"]').setAttribute('content',chosen==='light'?'#f8f0df':'#101b15');
-        try{localStorage.setItem('zelda-oot-theme',chosen);}catch(e){}
-      }
-      toggles.forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.themeChoice)));
-      setTheme(document.documentElement.dataset.theme==='light'?'light':'dark');
-    })();
-  </script>
-  <script>
-    (() => {
-      const links = [...document.querySelectorAll('[data-shot]')];
-      const box = document.querySelector('#lightbox');
-      const image = document.querySelector('#lightbox-img');
-      const caption = document.querySelector('#lightbox-caption');
-      let current = 0;
-      function show(index){current=(index+links.length)%links.length;const a=links[current];image.src=a.getAttribute('href');image.alt=a.querySelector('img').alt;caption.textContent=a.dataset.caption+' · '+(current+1)+' / '+links.length;}
-      links.forEach((a,i)=>a.addEventListener('click',e=>{if(!box.showModal)return;e.preventDefault();show(i);box.showModal();}));
-      document.querySelector('#close-shot').addEventListener('click',()=>box.close());
-      document.querySelector('#prev-shot').addEventListener('click',()=>show(current-1));
-      document.querySelector('#next-shot').addEventListener('click',()=>show(current+1));
-      box.addEventListener('click',e=>{if(e.target===box)box.close();});
-      box.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')show(current-1);if(e.key==='ArrowRight')show(current+1);});
-      box.addEventListener('close',()=>{image.removeAttribute('src');});
-    })();
-  </script>
-</body>
-</html>
+  <meta property="og:type" content="website"><meta property="og:locale" content="tr_TR"><meta property="og:site_name" content="Zelda Ocarina of Time Türkçe Yama">
+  <meta property="og:url" content="https://harunsins.github.io/zelda-oot-turkce-yama/"><meta property="og:title" content="Zelda Ocarina of Time Türkçe Yama v1.0 | İndir ve Kurulum"><meta property="og:description" content="The Legend of Zelda: Ocarina of Time (Switch 2) Türkçe yama v1.0. Ücretsiz indirme, animasyonlu kurulum rehberi ve Türkçe oyun görüntüleri.">
+  <meta property="og:image" content="https://harunsins.github.io/zelda-oot-turkce-yama/assets/01-ana-menu.webp"><meta property="og:image:alt" content="Ocarina of Time Türkçe yama ana menü">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Zelda Ocarina of Time Türkçe Yama v1.0 | İndir ve Kurulum"><meta name="twitter:image" content="https://harunsins.github.io/zelda-oot-turkce-yama/assets/01-ana-menu.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="assets/site.css" rel="stylesheet">
+  <script>try{const t=localStorage.getItem('zelda-oot-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;else if(matchMedia('(prefers-color-scheme: light)').matches)document.documentElement.dataset.theme='light';}catch(_e){}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://harunsins.github.io/zelda-oot-turkce-yama/","url":"https://harunsins.github.io/zelda-oot-turkce-yama/","inLanguage":"tr-TR","name":"Zelda Ocarina of Time Türkçe Yama v1.0 | İndir ve Kurulum","description":"The Legend of Zelda: Ocarina of Time (Switch 2) Türkçe yama v1.0. Ücretsiz indirme, animasyonlu kurulum rehberi ve Türkçe oyun görüntüleri.","isPartOf":{"@type":"WebSite","name":"Zelda Ocarina of Time Türkçe Yama","url":"https://harunsins.github.io/zelda-oot-turkce-yama/"},"about":{"@type":"VideoGame","name":"The Legend of Zelda: Ocarina of Time"},"sameAs":["https://github.com/harunsins/zelda-oot-turkce-yama","https://gamebanana.com/mods/740265"]}</script>
+  <script src="assets/site.js" defer></script>
+</head><body><header class="topbar"><nav class="container" aria-label="Ana gezinme">
+      <span class="header-symbol" aria-hidden="true"><svg viewBox="0 0 48 45"><path d="M24 2 35 22H13Z M12 23 23 43H1Z M36 23 47 43H25Z"/></svg></span>
+      <div class="header-actions"><div class="navlinks">
+         <a href="./">Ana Sayfa</a><a href="kurulum.html" >Kurulum</a><a href="./#goruntuler">Görseller</a>
+      </div><div class="controls">
+      <div class="theme-switch" role="group" aria-label="Görünüm teması">
+        <button type="button" data-theme-choice="light" aria-label="Açık tema" title="Açık tema" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button>
+        <button type="button" data-theme-choice="dark" aria-label="Koyu tema" title="Koyu tema" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.1 15.9A8.5 8.5 0 0 1 8.1 3.9 8.5 8.5 0 1 0 20.1 15.9Z"/></svg></button>
+      </div><div class="music-widget"><button class="music-toggle" type="button" id="music-toggle" aria-label="Müziği aç" aria-pressed="false" title="Müziği aç"><span data-icon-on hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13M9 9l12-3"/><ellipse cx="5.2" cy="18.7" rx="3.2" ry="2"/><ellipse cx="17.2" cy="16.2" rx="3.2" ry="2"/></svg></span><span data-icon-off><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 18V6l10-3v11M6 6l12 12M4 18l4-4m6-3 6 6"/></svg></span></button>
+         <button class="music-volume-gear" type="button" id="volume-expand" aria-label="Ses seviyesini ayarla" title="Ses seviyesi">☷</button>
+         <div class="music-volume"><label for="music-volume">Müzik sesi <output id="music-volume-value">75%</output></label><input id="music-volume" type="range" min="0" max="100" value="75" step="1" aria-label="Müzik ses seviyesi"><small>İkona dokunarak müziği aç veya kapat.</small></div>
+      </div></div></div>
+    </nav></header>
+<audio id="page-music" src="assets/kokiri-ambience.mp3" preload="none" loop aria-label="Sitede arka plan müziği"></audio>
+<main>
+<section class="hero" id="baslangic"><div class="container">
+<div class="hero-logo"><img src="assets/zelda-ocarina-of-time-logo.png" alt="The Legend of Zelda Ocarina of Time logosu" width="1000" height="739" fetchpriority="high"></div>
+<div class="hero-copy"><span class="eyebrow">Ocarina of Time · Switch 2</span><h1>Türkçe <span>Yama</span></h1>
+<p>Ocarina of Time için Türkçe dil yaması. Menüler, eşya açıklamaları ve diyaloglar Türkçe.</p>
+<div class="buttons"><a class="button" href="downloads/Zelda_OOT_Turkce_Yama_v1.0.zip" download>↓ &nbsp; Yamayı İndir</a><a class="button secondary" href="kurulum.html">Nasıl Kurulur?</a></div>
+<div class="metadata"><span>Yama <strong>v1.0</strong></span><span>Oyun <strong>2.0.0</strong></span><span>Dil <strong>American English</strong></span></div>
+</div></div></section>
+<section class="quickstart" id="kurulum"><div class="container"><div class="quickstart-top"><h2>Kurulum</h2><a href="kurulum.html">Animasyonlu rehber ›</a></div>
+<ol class="steps"><li><span class="number">1</span><span class="steptext">Yamayı indir<small>ZIP dosyasını al</small></span></li>
+<li><span class="number">2</span><span class="steptext">Arşivi çıkart<small>TurkceYama klasörü</small></span></li>
+<li><span class="number">3</span><span class="steptext">Mod dizinine kopyala<small>Mevcut yamayı yedekle</small></span></li>
+<li><span class="number">4</span><span class="steptext">Dili seç ve başlat<small>American English</small></span></li></ol></div></section>
+<section class="gallery-section" id="goruntuler"><div class="container"><div class="section-head"><div><span class="eyebrow">Oyundan Görüntüler</span><h2>Ekran Görüntüleri</h2></div><p>Görseli büyütmek için tıkla.</p></div>
+<div class="gallery"><figure class="shot"><a href="assets/01-ana-menu.webp" data-shot data-caption="Ana Menü"><img src="assets/01-ana-menu.webp" alt="Türkçe ana menü" loading="lazy" width="1600" height="900"></a><figcaption><span>Ana Menü</span><span class="index">01</span></figcaption></figure>
+<figure class="shot"><a href="assets/02-ayarlar.webp" data-shot data-caption="Ayarlar"><img src="assets/02-ayarlar.webp" alt="Türkçe ayarlar" loading="lazy" width="1600" height="900"></a><figcaption><span>Ayarlar</span><span class="index">02</span></figcaption></figure>
+<figure class="shot"><a href="assets/03-kontroller.webp" data-shot data-caption="Kontroller"><img src="assets/03-kontroller.webp" alt="Türkçe kontrol düzeni" loading="lazy" width="1600" height="900"></a><figcaption><span>Kontroller</span><span class="index">03</span></figcaption></figure>
+<figure class="shot"><a href="assets/04-ekipman.webp" data-shot data-caption="Ekipman"><img src="assets/04-ekipman.webp" alt="Türkçe ekipman açıklaması" loading="lazy" width="1600" height="900"></a><figcaption><span>Ekipman</span><span class="index">04</span></figcaption></figure>
+<figure class="shot"><a href="assets/05-esyalar.webp" data-shot data-caption="Eşyalar"><img src="assets/05-esyalar.webp" alt="Türkçe eşya açıklaması" loading="lazy" width="1600" height="900"></a><figcaption><span>Eşyalar</span><span class="index">05</span></figcaption></figure>
+<figure class="shot"><a href="assets/06-hizli-esya-secimi.webp" data-shot data-caption="Hızlı Eşya Seçimi"><img src="assets/06-hizli-esya-secimi.webp" alt="Türkçe hızlı eşya menüsü" loading="lazy" width="1600" height="900"></a><figcaption><span>Hızlı Eşya Seçimi</span><span class="index">06</span></figcaption></figure>
+<figure class="shot"><a href="assets/07-dukkan.webp" data-shot data-caption="Dükkân"><img src="assets/07-dukkan.webp" alt="Türkçe dükkân açıklamaları" loading="lazy" width="1600" height="900"></a><figcaption><span>Dükkân</span><span class="index">07</span></figcaption></figure>
+<figure class="shot"><a href="assets/08-harita.webp" data-shot data-caption="Harita"><img src="assets/08-harita.webp" alt="Türkçe Kokiri Ormanı haritası" loading="lazy" width="1600" height="900"></a><figcaption><span>Harita</span><span class="index">08</span></figcaption></figure>
+<figure class="shot"><a href="assets/09-oyun-ici.webp" data-shot data-caption="Oyun İçi Görünüm"><img src="assets/09-oyun-ici.webp" alt="Türkçe oyun içi arayüz" loading="lazy" width="1600" height="900"></a><figcaption><span>Oyun İçi Görünüm</span><span class="index">09</span></figcaption></figure>
+<figure class="shot"><a href="assets/10-npc-etkilesimi.webp" data-shot data-caption="NPC Etkileşimi"><img src="assets/10-npc-etkilesimi.webp" alt="NPC ile Türkçe konuşma seçeneği" loading="lazy" width="1600" height="900"></a><figcaption><span>NPC Etkileşimi</span><span class="index">10</span></figcaption></figure>
+<figure class="shot"><a href="assets/11-npc-konusmasi.webp" data-shot data-caption="NPC Konuşması"><img src="assets/11-npc-konusmasi.webp" alt="Türkçe NPC diyalogları" loading="lazy" width="1600" height="900"></a><figcaption><span>NPC Konuşması</span><span class="index">11</span></figcaption></figure></div></div></section>
+</main><footer><div class="container"><span>HarunSins · Zelda Ocarina of Time Türkçe Yama v1.0</span><span><a href="https://gamebanana.com/mods/740265" rel="noopener noreferrer" target="_blank">GameBanana</a> &nbsp;·&nbsp; <a href="https://github.com/harunsins/zelda-oot-turkce-yama" target="_blank" rel="noopener noreferrer">GitHub</a> &nbsp;·&nbsp; Gayriresmî hayran çalışması</span></div></footer>
+<dialog id="lightbox" aria-label="Ekran görüntüsü önizlemesi"><img id="lightbox-img" alt="" width="1600" height="900"><div class="lightbox-controls"><span id="lightbox-caption"></span><div><button type="button" id="prev-shot" aria-label="Önceki görsel">‹</button> <button type="button" id="next-shot" aria-label="Sonraki görsel">›</button> <button type="button" id="close-shot" aria-label="Kapat">Kapat</button></div></div></dialog>
+</body></html>

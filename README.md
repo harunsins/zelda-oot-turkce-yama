@@ -8,7 +8,7 @@
 
 Menüler, eşya açıklamaları ve diyalogları Türkçe oynamak için hazırlanmış bağımsız bir hayran çalışması.
 
-[**Yamayı İndir (ZIP)**](downloads/Zelda_OOT_Turkce_Yama_v1.0.zip) · [**Tanıtım Sitesi**](https://harunsins.github.io/zelda-oot-turkce-yama/) · [**Ayrıntılı Kurulum**](KURULUM.md)
+[**Yamayı İndir (ZIP)**](downloads/Zelda_OOT_Turkce_Yama_v1.0.zip) · [**Tanıtım Sitesi**](https://harunsins.github.io/zelda-oot-turkce-yama/) · [**Animasyonlu Kurulum**](kurulum.html) · [**GameBanana**](https://gamebanana.com/mods/740265) · [**Ayrıntılı Kurulum (MD)**](KURULUM.md)
 
 </div>
 
@@ -30,7 +30,7 @@ Menüler, eşya açıklamaları ve diyalogları Türkçe oynamak için hazırlan
 
 Klasör yapısı: `0400486024DEC000/TurkceYama/romfs`
 
-**[Ayrıntılı kurulum talimatları](KURULUM.md)** · [Düz metin kurulum rehberi](KURULUM.txt)
+**[Animasyonlu kurulum rehberi](kurulum.html)** · [Ayrıntılı kurulum talimatları](KURULUM.md) · [Düz metin kurulum rehberi](KURULUM.txt)
 
 ## Oyun içinden ekran görüntüleri
 
@@ -47,3 +47,5 @@ Klasör yapısı: `0400486024DEC000/TurkceYama/romfs`
 Bu yama **resmî olmayan bir hayran çalışmasıdır**. Nintendo ile bağlantılı değildir ve Nintendo tarafından onaylanmamıştır. *The Legend of Zelda* ve ilgili oyun varlıklarının hakları ilgili hak sahiplerine aittir.
 
 **Oyun ve emülatör bu pakete dahil değildir.** Yama, hedef sürüm için hazırlanmıştır; oyun içindeki tüm durumların kusursuz çalıştığı garanti edilmez.
+
+**Diğer yayın sayfamız:** [GameBanana · Zelda Ocarina of Time Türkçe Yama](https://gamebanana.com/mods/740265)
