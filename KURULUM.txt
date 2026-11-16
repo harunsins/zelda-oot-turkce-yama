@@ -1,12 +1,12 @@
 THE LEGEND OF ZELDA: OCARINA OF TIME - TÜRKÇE YAMA
 
-Sürüm: v1.0
+Sürüm: v1.1
 Oyun sürümü: 2.0.0
 Oyun dili: American English
 
 KURULUM
 
-1. Zelda_OOT_Turkce_Yama_v1.0.zip dosyasını indir.
+1. Zelda_OOT_Turkce_Yama_v1.1.zip dosyasını indir.
 2. ZIP arşivinden TurkceYama klasörünü çıkar.
 3. Oyun kapalıyken emülatörde oyunun mod dizinini aç.
 4. Varsa önceki Türkçe yama klasörünü yedekle ve kaldır.

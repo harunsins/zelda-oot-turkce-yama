@@ -8,7 +8,7 @@
 
 Menüler, eşya açıklamaları ve diyalogları Türkçe oynamak için hazırlanmış bağımsız bir hayran çalışması.
 
-[**Yamayı İndir (ZIP)**](downloads/Zelda_OOT_Turkce_Yama_v1.0.zip) · [**Tanıtım Sitesi**](https://harunsins.github.io/zelda-oot-turkce-yama/) · [**Animasyonlu Kurulum**](kurulum.html) · [**GameBanana**](https://gamebanana.com/mods/740265) · [**Ayrıntılı Kurulum (MD)**](KURULUM.md)
+[**Yamayı İndir (ZIP)**](downloads/Zelda_OOT_Turkce_Yama_v1.1.zip) · [**Tanıtım Sitesi**](https://harunsins.github.io/zelda-oot-turkce-yama/) · [**Animasyonlu Kurulum**](kurulum.html) · [**GameBanana**](https://gamebanana.com/mods/740265) · [**Ayrıntılı Kurulum (MD)**](KURULUM.md)
 
 </div>
 
@@ -16,14 +16,14 @@ Menüler, eşya açıklamaları ve diyalogları Türkçe oynamak için hazırlan
 
 | | |
 |---|---|
-| **Türkçe yama sürümü** | **v1.0** · İlk herkese açık sürüm |
+| **Türkçe yama sürümü** | **v1.1** · İlk herkese açık sürüm |
 | **Hedef oyun sürümü** | **2.0.0** |
 | **Seçilmesi gereken oyun dili** | **American English** |
 | **Oyun kimliği** | `0400486024DEC000` |
 
 ## Nasıl kurulur?
 
-1. [**Türkçe yamayı indir**](downloads/Zelda_OOT_Turkce_Yama_v1.0.zip) ve ZIP dosyasını çıkar.
+1. [**Türkçe yamayı indir**](downloads/Zelda_OOT_Turkce_Yama_v1.1.zip) ve ZIP dosyasını çıkar.
 2. Emülatörde oyunun **mod klasörünü** aç. Daha önce yüklenmiş bir Türkçe yama varsa yedekleyip kaldır.
 3. Arşivdeki `TurkceYama` klasörünü mod dizinine kopyala.
 4. Yamayı etkinleştir, oyun dilini **American English** olarak seç ve oyunu başlat.
